@@ -1,0 +1,103 @@
+<p>This is the partial for search.</p>
+
+<table align="center" width="500"  border="0" cellspacing="2" cellpadding="3">
+    <tr>
+        <td width="30%"><b>State</b> </td>
+        <td width="70%">
+            <select name="state" id="state">
+                <option value="Andhra Pradesh">Andhra Pradesh</option>
+            </select>
+        </td>
+    </tr>
+    
+    <tr>
+        <td width="30%"><b>District</b> </td>
+        <td width="70%">
+            <select name="district" id="district" required="required" ng-model="ttd.selectedDistrict" >
+               <option value="">Select District</option>
+                <option  ng-repeat="v in allDistrics" value={{v.distId}}>{{v.distName}}</option>
+            </select>
+        </td>
+        
+    </tr>
+    <tr>
+        <td width="30%"><b>Mandal</b> </td>
+        <td width="70%">
+            <select name="mandal" id="mandal" required="required" ng-model="ttd.selectedMandal">
+                <option value="">Select Mandal</option>
+                <option ng-repeat="m in allMandals" value={{m.mandalId}}>{{m.mandalName}}</option>
+            </select>
+        </td>
+    </tr>
+    <tr>
+        <td width="30%"><b>Village</b> </td>
+        <td width="70%">
+            <select name="village" id="village" required="required" ng-model="ttd.selectedVillage">
+                <option value="">Select Village</option>
+                <option ng-repeat="vil in allVillages" value={{vil.villageId}}>{{vil.villageName}}</option>
+            </select>
+        </td>
+    </tr>
+    <tr>
+        <td width="30%"><b>Category</b> </td>
+        <td width="70%">
+            <select name="category" id="category" required="required" ng-model="selectedCat">
+                <option value="">Select Category</option>
+                <option value="BAJANAMANDALI">BAJANAMANDALI</option>
+                <option value="SRIVARI SEVA">SRIVARI SEVA</option>
+                <option value="PRAVACHAM">PRAVACHAM</option>
+                <option value="PUROHIT/ARCHAKA">PUROHIT/ARCHAKA</option>
+                <option value="DONORS">DONORS</option>
+                <option value="GOVINDAM PARAMANANDAM">GOVINDAM PARAMANANDAM</option>
+                <option value="LOCAL TEMPLE">LOCAL TEMPLE</option>
+                <option value="KOLATAM">KOLATAM</option>
+                <option value="CULTURAL">CULTURAL</option>
+                <option value="OTHERS">OTHERS</option>
+            </select>
+        </td>
+    </tr>
+    <tr>
+        <td>&nbsp;</td>
+        <td>
+            <label>
+                <button ng-click="searchAll()">Search</button>
+            </label>
+        </td>
+    </tr>
+    <tr></tr><tr></tr>
+    <tr>
+    <div class="table-responsive">
+    <table class="table table-striped table-bordered table-condensed table-hover">
+        <thead>
+        <tr> 
+            <th>Category</th>
+            <th>Association Name</th>
+            <th>Temple Name</th>
+            <th>Name</th>
+            <th>Designation</th>
+            <th>Phone</th>
+            <th>Email</th>
+        </tr>
+        </thead>
+        <tr ng-repeat="cat in filteredCats">
+            <td>{{cat.category}}</td>
+            <td>{{cat.associationName}}</td>
+            <td>{{cat.templeName}}</td>
+            <td>{{cat.name}}</td>
+            <td>{{cat.designation}}</td>
+            <td>{{cat.phone}}</td>
+            <td>{{cat.email}}</td>
+        </tr>
+     </table>
+</div>
+</tr>
+<tr>
+<div class="well well-small">
+      <pagination rotate="false" boundary-links="true" total-items="totalItems" num-pages="numPages" items-per-page="itemsPerPage" page="currentPage" class="pagination-small" previous-text="&lsaquo;" next-text="&rsaquo;" first-text="&laquo;" last-text="&raquo;"></pagination>
+      <!--<pagination total-items="bigTotalItems" page="bigCurrentPage" max-size="maxSize" class="pagination-small" boundary-links="true" rotate="false" num-pages="numPages"></pagination>-->
+</div>
+</tr>
+</table>
+
+
+    

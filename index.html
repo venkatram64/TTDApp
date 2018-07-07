@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en" ng-app="ttdApp">
+    <head>
+        <meta charset="utf-8">
+        <title>My TTD App</title>
+        <link rel="stylesheet" href="css/app.css"/>
+        <link rel="stylesheet" href="css/bootstrap.css"/>
+        <link rel="stylesheet" href="css/base/jquery.ui.all.css"/>
+        <link href="http://netdna.bootstrapcdn.com/twitter-bootstrap/2.3.1/css/bootstrap.min.css" rel="stylesheet"/>
+    </head>
+    <body>
+        <div class="navbar navbar-default navbar-static-top"  >
+            <div class="container" id="mainId">
+                <a href="#" class="navbar-brand">TTD Information</a>
+                <div id="headerId" class="collapse navbar-collapse navHeaderCollapse">
+                    <header class="masthead">
+                        <ul class="nav navbar-right nav-pills">
+                            <li><a href="#/home">Home</a></li>
+                            <li class="divider-vertical"></li>
+                            <li><a href="#/search">Search</a></li>
+                            <li class="divider-vertical"></li>
+                            <li><a href="#/registration">Registration</a></li>
+                            <li class="divider-vertical"></li>
+                            <li><a href="#/admin">Admin</a></li>
+                        </ul>
+                    </header>
+                </div>
+            </div>
+        </div>
+        <div class="container" id="dynaContentid" >
+            <div ng-view></div>
+        </div>
+        <script src="lib/angular/angular.js"></script>
+        <script src="lib/angular/angular-route.js"></script>
+        <script src="lib/angular/angular-resource.js"></script>
+        <script src="lib/jquery/jquery.js"></script>
+        <script src="lib/jquery/jquery-ui.js"></script>
+        <script src="lib/bootstrap/bootstrap.js"></script>
+        <script src="lib/bootstrap/ui-bootstrap-tpls-0.7.0.js"></script>
+        <script src="lib/lodash/lodash.js"></script>
+        <script src="js/app.js"></script>
+        <script src="js/admin/services.js"></script>
+        <script src="js/admin/controllers.js"></script>
+        <script src="js/admin/filters.js"></script>
+        <script src="js/admin/directives.js"></script>
+        <script src="js/home/services.js"></script>
+        <script src="js/home/controllers.js"></script>
+        <script src="js/home/filters.js"></script>
+        <script src="js/home/directives.js"></script>
+        <script src="js/registration/services.js"></script>
+        <script src="js/registration/controllers.js"></script>
+        <script src="js/registration/filters.js"></script>
+        <script src="js/registration/directives.js"></script>
+        <script src="js/search/services.js"></script>
+        <script src="js/search/controllers.js"></script>
+        <script src="js/search/filters.js"></script>
+        <script src="js/search/directives.js"></script> 
+        <script src="js/controllers.js"></script>
+    </body>
+</html>
